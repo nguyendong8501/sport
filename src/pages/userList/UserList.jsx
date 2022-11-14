@@ -16,7 +16,7 @@ export default function UserList() {
     { field: "id", headerName: "ID", width: 90 },
     {
       field: "user",
-      headerName: "User",
+      headerName: "Tên khách hàng",
       width: 200,
       renderCell: (params) => {
         return (
@@ -30,17 +30,17 @@ export default function UserList() {
     { field: "email", headerName: "Email", width: 200 },
     {
       field: "status",
-      headerName: "Status",
+      headerName: "Địa chỉ",
       width: 120,
     },
     {
       field: "transaction",
-      headerName: "Transaction Volume",
+      headerName: "Số điện thoại",
       width: 160,
     },
     {
       field: "action",
-      headerName: "Action",
+      headerName: "Thao tác",
       width: 150,
       renderCell: (params) => {
         return (
@@ -60,7 +60,7 @@ export default function UserList() {
 
   return (
     <div className="userList">
-      <Link to="/newproduct">
+      <Link to="/newUser">
       <button className="productAddButton">Thêm mới</button>
     </Link>
       <DataGrid

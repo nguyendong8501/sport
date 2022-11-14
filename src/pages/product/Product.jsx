@@ -10,53 +10,51 @@ export default function Product() {
       <div className="productTitleContainer">
         <h1 className="productTitle">Sửa sản phẩm</h1>
         <Link to="/newproduct">
-          <button className="productAddButton">Thêm mới</button>
+          <button className="productAddButton">Lưu</button>
         </Link>
       </div>
       <div className="productTop">
           <div className="productTopLeft">
               <Chart data={productData} dataKey="Sales" title="Sales Performance"/>
           </div>
-          <div className="productTopRight">
+          {/* <div className="productTopRight">
               <div className="productInfoTop">
                   <img src="https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" className="productInfoImg" />
-                  <span className="productName">Apple Airpods</span>
+                  <span className="productName">Cá mập</span>
               </div>
               <div className="productInfoBottom">
                   <div className="productInfoItem">
-                      <span className="productInfoKey">id:</span>
+                      <span className="productInfoKey">Giá sản phẩm:</span>
                       <span className="productInfoValue">123</span>
                   </div>
                   <div className="productInfoItem">
-                      <span className="productInfoKey">sales:</span>
+                      <span className="productInfoKey">Số lượng:</span>
                       <span className="productInfoValue">5123</span>
                   </div>
                   <div className="productInfoItem">
-                      <span className="productInfoKey">active:</span>
-                      <span className="productInfoValue">yes</span>
+                      <span className="productInfoKey">Nhà cung cấp:</span>
+                      <span className="productInfoValue">Vạn Phúc</span>
                   </div>
                   <div className="productInfoItem">
-                      <span className="productInfoKey">in stock:</span>
-                      <span className="productInfoValue">no</span>
+                      <span className="productInfoKey">Mô tả:</span>
+                      <span className="productInfoValue">Giống cá đến từ châu Âu</span>
                   </div>
               </div>
-          </div>
+          </div> */}
       </div>
       <div className="productBottom">
           <form className="productForm">
               <div className="productFormLeft">
-                  <label>Product Name</label>
-                  <input type="text" placeholder="Apple AirPod" />
-                  <label>In Stock</label>
-                  <select name="inStock" id="idStock">
-                      <option value="yes">Yes</option>
-                      <option value="no">No</option>
-                  </select>
-                  <label>Active</label>
-                  <select name="active" id="active">
-                      <option value="yes">Yes</option>
-                      <option value="no">No</option>
-                  </select>
+                  <label>Tên sản phẩm</label>
+                  <input type="text" placeholder="Cá mập" />
+                  <label>Giá sản phẩm</label>
+                  <input type="text" placeholder="123" />
+                  <label>Số lượng</label>
+                  <input type="text" placeholder="123" />
+                  <label>Nhà cung cấp</label>
+                  <input type="text" placeholder="Vạn Phúc" />
+                  <label>Mô tả</label>
+                  <input type="text" placeholder="Giống cá đến từ châu Âu" />
               </div>
               <div className="productFormRight">
                   <div className="productUpload">

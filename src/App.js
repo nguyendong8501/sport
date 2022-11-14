@@ -9,10 +9,12 @@ import NewUser from "./pages/newUser/NewUser";
 import ProductList from "./pages/productList/ProductList";
 import Product from "./pages/product/Product";
 import NewProduct from "./pages/newProduct/NewProduct";
+import ProductContextProvider from "./contexts/productContext";
 
 function App() {
   return (
-    <Router>
+     <ProductContextProvider>
+<Router>
       <Topbar />
       <div className="container">
         <Sidebar />
@@ -41,6 +43,9 @@ function App() {
         </Routes>
       </div>
     </Router>
+
+     </ProductContextProvider>
+    
   );
 }
 
