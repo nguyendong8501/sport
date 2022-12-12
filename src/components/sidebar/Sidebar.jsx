@@ -12,7 +12,10 @@ import {
   ChatBubbleOutline,
   WorkOutline,
   Report,
+  People,
+  Home,
 } from "@material-ui/icons";
+// import PeopleIcon from '@mui/icons-material/People';
 import { Link } from "react-router-dom";
 
 export default function Sidebar() {
@@ -51,6 +54,24 @@ export default function Sidebar() {
               <li className="sidebarListItem">
                 <Storefront className="sidebarIcon" />
                 Quản lý sản phẩm
+              </li>
+            </Link>
+            <Link to="/suppliers" className="link">
+              <li className="sidebarListItem">
+                <Home className="sidebarIcon" />
+                Quản lý nhà cung cấp
+              </li>
+            </Link>
+            <Link to="/staff" className="link">
+              <li className="sidebarListItem">
+                <People className="sidebarIcon" />
+                Quản lý nhân viên
+              </li>
+            </Link>
+            <Link to="/staff" className="link">
+              <li className="sidebarListItem">
+                <BarChart className="sidebarIcon" />
+                Quản lý thống kê
               </li>
             </Link>
             {/* <li className="sidebarListItem">

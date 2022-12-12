@@ -33,15 +33,15 @@ export const productReducer = (state, action) => {
 		case DELETE_PRODUCT:
 			return {
 				...state,
-				products: state.products.filter(product => product._id !== payload)
+				products: state.products.filter(products => products._id !== payload)
 			}
 
 		case FIND_PRODUCT:
-			return { ...state, product: payload }
+			return { ...state, products: payload }
 
 		case UPDATE_PRODUCT:
-			const newProducts = state.products.map(product =>
-				product._id === payload._id ? payload : product
+			const newProducts = state.products.map(products =>
+				products._id === payload._id ? payload : products
 			)
 
 			return {

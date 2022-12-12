@@ -2,35 +2,35 @@ import Card from 'react-bootstrap/Card'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Badge from 'react-bootstrap/Badge'
+import { CollectionsTwoTone } from '@material-ui/icons'
 // import ActionButtons from './ActionButtons'
 
-const SingleProduct = ({ product: { _id, status, title, description, url } }) => (
+const SingleProduct = ({ products: { _id, name, cost, amount } }) => (
+	// const [rowData, setRowData] = useState([]);
+
+    // const [colDefs, setColDefs] = useState(
+    //     [
+    //         {field:"make"},
+    //         {field:"model"},
+    //         {field:"price", editable:true}
+    //     ]);
+
+	
+
+
 	<Card
 		className='shadow'
-		border={
-			status === 'LEARNED'
-				? 'success'
-				: status === 'LEARNING'
-				? 'warning'
-				: 'danger'
-		}
+		
 	>
 		<Card.Body>
 			<Card.Title>
 				<Row>
 					<Col>
-						<p className='post-title'>{title}</p>
+						<p className='post-title'>{name}</p>
 						<Badge
 							pill
-							variant={
-								status === 'LEARNED'
-									? 'success'
-									: status === 'LEARNING'
-									? 'warning'
-									: 'danger'
-							}
 						>
-							{status}
+							{cost}
 						</Badge>
 					</Col>
 					<Col className='text-right'>
@@ -38,7 +38,9 @@ const SingleProduct = ({ product: { _id, status, title, description, url } }) =>
 					</Col>
 				</Row>
 			</Card.Title>
-			<Card.Text>{description}</Card.Text>
+			{/* <Card.Text>{cost}</Card.Text> */}
+			<Card.Text>{amount}</Card.Text>
+
 		</Card.Body>
 	</Card>
 )

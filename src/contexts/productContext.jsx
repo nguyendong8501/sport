@@ -32,11 +32,12 @@ const ProductContextProvider = ({ children }) => {
 	// Get all products
 	const readAll = async () => {
 		try {
-			const response = await axios.get(`${apiUrl}/products`)
+			const response = await axios.get(`${apiUrl}/product/get`)
 			if (response.data.success) {
 				dispatch({ type: PRODUCTS_LOADED_SUCCESS, payload: response.data.products })
 			}
 		} catch (error) {
+			console.log(error)
 			dispatch({ type: PRODUCTS_LOADED_FAIL })
 		}
 	}
@@ -90,7 +91,7 @@ const ProductContextProvider = ({ children }) => {
 				: { success: false, message: 'Server error' }
 		}
 	}
-
+	
 	// Product context data
 	const productContextData = {
 		productState,
